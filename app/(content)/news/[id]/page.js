@@ -4,7 +4,6 @@ import BackLink from "@/components/back-link";
 
 export default async function NewsDetailPage({ params }) {
   const { id } = params;
-  console.log(id);
 
   const news = await getNewsById(id);
   if (!news) return notFound();
@@ -17,7 +16,7 @@ export default async function NewsDetailPage({ params }) {
         <p>{news.date}</p>
       </header>
 
-      <img src={news.image} alt={news.title} />
+      <img src={news.imageUrl} alt={news.title} />
       <p>{news.content}</p>
     </>
   );

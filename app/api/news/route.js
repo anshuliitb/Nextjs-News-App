@@ -24,7 +24,8 @@ export async function POST(req) {
   // Save document using your schema fields
   const news = await News.create({
     title,
-    image: uploadedImage.url,
+    imageUrl: uploadedImage.url,
+    imagePublicId: uploadedImage.publicId,
     date,
     content,
   });
