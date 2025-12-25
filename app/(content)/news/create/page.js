@@ -38,11 +38,6 @@ export default function NewsForm() {
       </div>
 
       <div className={styles.control}>
-        <label className={styles.label}>Slug</label>
-        <input name="slug" className={styles.input} required />
-      </div>
-
-      <div className={styles.control}>
         <label className={styles.label}>Content</label>
         <textarea name="content" className={styles.textarea} required />
       </div>

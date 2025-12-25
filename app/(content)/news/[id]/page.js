@@ -1,12 +1,12 @@
 import { notFound } from "next/navigation";
-import Link from "next/link";
-import { getNewsBySlug } from "@/lib/news";
+import { getNewsById } from "@/lib/news";
 import BackLink from "@/components/back-link";
 
 export default async function NewsDetailPage({ params }) {
-  const { slug } = params;
+  const { id } = params;
+  console.log(id);
 
-  const news = await getNewsBySlug(slug);
+  const news = await getNewsById(id);
   if (!news) return notFound();
 
   return (

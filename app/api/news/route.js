@@ -10,7 +10,6 @@ export async function POST(req) {
   const formData = await req.formData();
 
   const title = formData.get("title");
-  const slug = formData.get("slug");
   const date = formData.get("date");
   const content = formData.get("content");
   const image = formData.get("image");
@@ -25,7 +24,6 @@ export async function POST(req) {
   // Save document using your schema fields
   const news = await News.create({
     title,
-    slug,
     image: uploadedImage.url,
     date,
     content,

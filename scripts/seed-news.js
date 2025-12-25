@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-import News from "../models/newsModel.js"; // adjust path if needed
+import News from "../models/newsModel.js"; 
 
 const DUMMY_NEWS = [
   {
