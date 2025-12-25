@@ -17,7 +17,7 @@ export default function MainHeader() {
             <NavLink href="/archive">Archive</NavLink>
           </li>
           <li>
-            <Link href="/news/create">Create News</Link>
+            <NavLink href="/news/create">Create News</NavLink>
           </li>
         </ul>
       </nav>
